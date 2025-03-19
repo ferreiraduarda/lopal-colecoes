@@ -20,28 +20,26 @@
         //Arrays
         //      alunos = [1º nome, 2º nome, 3º nome...]  
         //      alunos = [  0   ,   1   ,   2   ,   3   ,   ...]
-
         function adicionarNome() {
+            let adicionarMais = "sim";
         let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi" ];
-
-        const resposta = prompt("Você deseja acrescentar um nome a lista?")
-
-        if(resposta.toLowerCase() === "sim") {
-            const novoNome = prompt("Digite o nome que deseja adicionar:");
-            alunos.push(novoNome);
-        }else {
-            alert("Nome inválido.");
-        }
         
-        //Acrescentar um nome ao final do array
-        alunos.push("Gabriel");
-        alunos.push("Henrique");
-        
-        for(let indice = 0; indice < alunos.length; indice++) {
-            document.write(alunos[indice] + "<br>");
+        while (adicionarMais.toLowerCase() === "sim") {
+        const novoNome = prompt("Digite o nome que deseja adicionar à lista:");
+        if (novoNome && novoNome.trim() !== "") {
+            alunos.push(novoNome);  // Adiciona o nome ao final do array
+        } else {
+            alert("Nome inválido! Por favor, insira um nome válido.");
         }
+        adicionarMais = prompt("Você deseja adicionar outro nome? (sim/não)");
+        }
+        document.write("<h2>Lista de Alunos:</h2>");
+
+        for (let i = 0; i < alunos.length; i++) {
+        document.write(alunos[i] + "<br>");
     }
-
+    }
+    adicionarNome();
         </script>
 </body>
 </html>
