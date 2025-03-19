@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+
+        //Problema...
+        /*const aluno1 = "Aline";
+        const aluno2 = "Arthur";
+        const aluno3 = "Bárbara";
+
+        document.write(aluno1 + "<br>");
+        document.write(aluno2 + "<br>");
+        document.write(aluno3 + "<br>");*/
+
+        //Arrays
+        //      alunos = [1º nome, 2º nome, 3º nome...]  
+        //      alunos = [  0   ,   1   ,   2   ,   3   ,   ...]
+
+        function adicionarNome() {
+        let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi" ];
+
+        const resposta = prompt("Você deseja acrescentar um nome a lista?")
+
+        if(resposta.toLowerCase() === "sim") {
+            const novoNome = prompt("Digite o nome que deseja adicionar:");
+            alunos.push(novoNome);
+        }else {
+            alert("Nome inválido.");
+        }
+        
+        //Acrescentar um nome ao final do array
+        alunos.push("Gabriel");
+        alunos.push("Henrique");
+        
+        for(let indice = 0; indice < alunos.length; indice++) {
+            document.write(alunos[indice] + "<br>");
+        }
+    }
+
+        </script>
+</body>
+</html>
