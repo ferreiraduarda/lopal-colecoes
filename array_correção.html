@@ -44,13 +44,10 @@
 
     function removerAluno(){
         if (alunos.length > 0) {
-            alunos.pop();  // Remove o último aluno da lista
+            alunos.pop();  // remove o último aluno da lista
             alert("Último aluno removido!");
-        } else {
-            alert("A lista está vazia, não há alunos para remover.");
         }
 
-        // Após remover um aluno, imprime a lista atualizada
         imprimirAlunos();
     }
 
